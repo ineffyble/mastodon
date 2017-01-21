@@ -1,0 +1,354 @@
+{
+    "docs": [
+        {
+            "location": "/Home/", 
+            "text": "Mastodon\n is a free, open-source GNU social-compatible social network server. A decentralized alternative to commercial platforms, it avoids the risks of a single company monopolizing your communication. Anyone can run Mastodon and participate in the social network seamlessly.\n\n\nUsing Mastodon\n\n\n\n\nFrequently Asked Questions\n\n\nList of Mastodon instances\n\n\nApps\n\n\n\n\nUsing the API\n\n\n\n\nAPI documentation\n\n\nTesting the API with cURL\n\n\nOAuth details\n\n\nTips for app developers\n\n\n\n\nRunning Mastodon\n\n\n\n\nProduction guide\n\n\nDevelopment guide\n\n\n\n\nContributing to Mastodon\n\n\n\n\nSponsors\n\n\nTranslate Mastodon in your language\n\n\nReport bugs and submit ideas", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/Home/#using-mastodon", 
+            "text": "Frequently Asked Questions  List of Mastodon instances  Apps", 
+            "title": "Using Mastodon"
+        }, 
+        {
+            "location": "/Home/#using-the-api", 
+            "text": "API documentation  Testing the API with cURL  OAuth details  Tips for app developers", 
+            "title": "Using the API"
+        }, 
+        {
+            "location": "/Home/#running-mastodon", 
+            "text": "Production guide  Development guide", 
+            "title": "Running Mastodon"
+        }, 
+        {
+            "location": "/Home/#contributing-to-mastodon", 
+            "text": "Sponsors  Translate Mastodon in your language  Report bugs and submit ideas", 
+            "title": "Contributing to Mastodon"
+        }, 
+        {
+            "location": "/About/FAQ/", 
+            "text": "Frequently Asked Questions\n\n\nWhat is a Mastodon?\n\n\nA prehistoric animal, predecessor of the mammoth.\n\n\nWhy the name Mastodon?\n\n\nThere's a progressive metal band with the same name that I'm a fan of that brought the animal to my attention. I thought it's a pretty cool name/animal.\n\n\nHow exactly is it decentralized?\n\n\nThere are different ways in which something can be decentralized; in this case, Mastodon is the \"federated\" kind. Think e-mail, not BitTorrent. There are different servers (instances), users have an account on one of them, but can interact and follow each other regardless of where their account is.\n\n\nTechnically, how does the federation work?\n\n\nWe are using the OStatus suite of protocols:\n\n\n\n\nWebfinger for user-on-domain lookup\n\n\nAtom feeds with ActivityStreams, Portable Contacts, Threads extensions for the actual content\n\n\nPubSubHubbub for subscribing to Atom feeds\n\n\nSalmon for delivering certain items from the Atom feeds to interested parties such as the mentioned user, author of the status being replied to, person being followed, etc\n\n\n\n\nWhat is mastodon.social?\n\n\nThe \"flagship\" instance of Mastodon, aka the server I run myself with the latest code. It's not supposed to be the only instance in the end.\n\n\nWhat else is part of the federated network?\n\n\nLet's call it the \"fediverse\". It has existed for a longer while, populated by GNU social servers, Friendica, Hubzilla, Diaspora etc. Not every one of those servers is fully compatible with every other. Mastodon strives to be fully standards-compliant and compatibility with GNU social is higher in priority than the others.\n\n\nI tried logging into a GNU social client app with Mastodon and it didn't work, why?\n\n\nWhile Mastodon is compatible with GNU social in terms of server to server communication, the client to server API (aka how you access Mastodon) is different. Therefore, client apps that were made for specifically GNU social will not work with Mastodon. The reason for this is half technical, half ideological.\n\n\nBecause Mastodon has been created from a blank slate, it is much simpler to have the API mirror internal structures as closely as possible, rather than build an emulation layer. Secondly, the GNU social client API is actually a half-way implementation of the legacy Twitter API - that's the reason why it works with some older Twitter client apps. However, many of those apps are not maintained anymore, the GNU social API does not actually keep up with the real Twitter API and never fully implemented all its features; at the same time, the Twitter API was never meant for a federated service and so obscures some of the functionality.\n\n\nHow is Mastodon funded?\n\n\nDevelopment of Mastodon and hosting of mastodon.social is funded through my \nPatreon (also BTC/PayPal donations)\n. Beyond that, I am not interested in VC funding, monetizing, advertising, or anything of that sort. I could offer setup/maintenance services on demand.\n\n\nThe software is free and open source and communities should host their own servers if they can, that way the costs are more or less distributed. Obviously it'd be hard for me to pay the bills if literally everyone decided to use the mastodon.social instance only.", 
+            "title": "FAQ"
+        }, 
+        {
+            "location": "/About/FAQ/#frequently-asked-questions", 
+            "text": "", 
+            "title": "Frequently Asked Questions"
+        }, 
+        {
+            "location": "/About/FAQ/#what-is-a-mastodon", 
+            "text": "A prehistoric animal, predecessor of the mammoth.", 
+            "title": "What is a Mastodon?"
+        }, 
+        {
+            "location": "/About/FAQ/#why-the-name-mastodon", 
+            "text": "There's a progressive metal band with the same name that I'm a fan of that brought the animal to my attention. I thought it's a pretty cool name/animal.", 
+            "title": "Why the name Mastodon?"
+        }, 
+        {
+            "location": "/About/FAQ/#how-exactly-is-it-decentralized", 
+            "text": "There are different ways in which something can be decentralized; in this case, Mastodon is the \"federated\" kind. Think e-mail, not BitTorrent. There are different servers (instances), users have an account on one of them, but can interact and follow each other regardless of where their account is.", 
+            "title": "How exactly is it decentralized?"
+        }, 
+        {
+            "location": "/About/FAQ/#technically-how-does-the-federation-work", 
+            "text": "We are using the OStatus suite of protocols:   Webfinger for user-on-domain lookup  Atom feeds with ActivityStreams, Portable Contacts, Threads extensions for the actual content  PubSubHubbub for subscribing to Atom feeds  Salmon for delivering certain items from the Atom feeds to interested parties such as the mentioned user, author of the status being replied to, person being followed, etc", 
+            "title": "Technically, how does the federation work?"
+        }, 
+        {
+            "location": "/About/FAQ/#what-is-mastodonsocial", 
+            "text": "The \"flagship\" instance of Mastodon, aka the server I run myself with the latest code. It's not supposed to be the only instance in the end.", 
+            "title": "What is mastodon.social?"
+        }, 
+        {
+            "location": "/About/FAQ/#what-else-is-part-of-the-federated-network", 
+            "text": "Let's call it the \"fediverse\". It has existed for a longer while, populated by GNU social servers, Friendica, Hubzilla, Diaspora etc. Not every one of those servers is fully compatible with every other. Mastodon strives to be fully standards-compliant and compatibility with GNU social is higher in priority than the others.", 
+            "title": "What else is part of the federated network?"
+        }, 
+        {
+            "location": "/About/FAQ/#i-tried-logging-into-a-gnu-social-client-app-with-mastodon-and-it-didnt-work-why", 
+            "text": "While Mastodon is compatible with GNU social in terms of server to server communication, the client to server API (aka how you access Mastodon) is different. Therefore, client apps that were made for specifically GNU social will not work with Mastodon. The reason for this is half technical, half ideological.  Because Mastodon has been created from a blank slate, it is much simpler to have the API mirror internal structures as closely as possible, rather than build an emulation layer. Secondly, the GNU social client API is actually a half-way implementation of the legacy Twitter API - that's the reason why it works with some older Twitter client apps. However, many of those apps are not maintained anymore, the GNU social API does not actually keep up with the real Twitter API and never fully implemented all its features; at the same time, the Twitter API was never meant for a federated service and so obscures some of the functionality.", 
+            "title": "I tried logging into a GNU social client app with Mastodon and it didn't work, why?"
+        }, 
+        {
+            "location": "/About/FAQ/#how-is-mastodon-funded", 
+            "text": "Development of Mastodon and hosting of mastodon.social is funded through my  Patreon (also BTC/PayPal donations) . Beyond that, I am not interested in VC funding, monetizing, advertising, or anything of that sort. I could offer setup/maintenance services on demand.  The software is free and open source and communities should host their own servers if they can, that way the costs are more or less distributed. Obviously it'd be hard for me to pay the bills if literally everyone decided to use the mastodon.social instance only.", 
+            "title": "How is Mastodon funded?"
+        }, 
+        {
+            "location": "/About/Specs-and-RFCs-used/", 
+            "text": "OStatus\n\n\nSalmon\n\n\nPortable Contacts\n\n\nAtom\n\n\nAtom ActivityStreams\n\n\nAtom Threading\n\n\nPubSubHubbub\n\n\nWebfinger\n\n\nLink-based Resource Descriptor Discovery", 
+            "title": "Specs and RFCs used"
+        }, 
+        {
+            "location": "/About/Sponsors/", 
+            "text": "These people make the development of Mastodon possible through \nPatreon\n:\n\n\nExtra special Patrons\n\n\n\n\nWorld'sTallestLadder\n\n\nglocal\n\n\nJimmy Tidey\n\n\nKurtis Rainbolt-Greene\n\n\nKit Redgrave\n\n\n\n\nThank you to the following people\n\n\n\n\nSophia Park\n\n\nWelshPixie\n\n\nJohn Parker\n\n\nChristina Hendricks\n\n\nJelle\n\n\nHarris Bomberguy\n\n\nMartin Tithonium\n\n\nEdward Saperia\n\n\nYoz Grahame\n\n\nJenn Kaplan\n\n\nNatalie Weizenbaum\n\n\nMatteo De Micheli\n\n\nBirdMachine\n\n\nJessica Hayley\n\n\nNiels Roesen Abildgaard\n\n\nZatnosk", 
+            "title": "Sponsors"
+        }, 
+        {
+            "location": "/Contributing/Contribution-guide/", 
+            "text": "Don't use Docker to do development\n. It's a quick way to get Mastodon running in production, it's \nreally really inconvenient for development\n. Normally in Rails development environment you get hot reloading of backend code and on-the-fly compilation of assets like JS and CSS, but you lose those benefits by compiling a Docker image. If you want to contribute to Mastodon, it is worth it to simply set up a proper development environment.\n\n\nIn fact, all you need is described in the \nproduction guide\n, \nwith the following exceptions\n. You \ndon't\n need:\n\n\n\n\nNginx\n\n\nSystemD\n\n\nAn \n.env.production\n file. If you need to set any environment variables, you can use an \n.env\n file\n\n\nTo prefix any commands with \nRAILS_ENV=production\n since the default environment is \"development\" anyway\n\n\nAny cronjobs\n\n\n\n\nThe command to install project dependencies does not require any flags, i.e. simply\n\n\nbundle install\n\n\n\nBy default the development environment wants to connect to a \nmastodon_development\n database on localhost using your user/ident to login to Postgres (i.e. not a md5 password)\n\n\nYou can run Mastodon with:\n\n\nrails s\n\n\n\nAnd open \nhttp://localhost:3000\n in your browser. Background jobs run inline (aka synchronously) in the development environment, so you don't need to run a Sidekiq process.\n\n\nYou can run tests with:\n\n\nrspec\n\n\n\nYou can check localization status with:\n\n\ni18n-tasks health\n\n\n\nYou can check code quality with:\n\n\nrubocop\n\n\n\nDevelopment tips\n\n\nYou can use a localhost-\nworld tunneling service like ngrok if you want to test federation, \nhowever\n that should not be your primary mode of operation. If you want to have a permanently federating server, set up a proper instance on a VPS with a domain name, and simply keep it up to date with your own fork of the project while doing development on localhost. \n\n\nNgrok and similar services give you a random domain on each start up. This is good enough to test how the code you're working on handles real-world situations. But as soon as your domain changes, for everybody else concerned you're a different instance than before.\n\n\nGenerally, federation bits are tricky to work on for exactly this reason - it's hard to test. And when you are testing with a disposable instance you are polluting the databases of the real servers you're testing against, usually not a big deal but can be annoying. The way I have handled this so far was thus: I have used ngrok for one session, and recorded the exchanges from its web interface to create fixtures and test suites. From then on I've been working with those rather than live servers.\n\n\nI advise to study the existing code and the RFCs before trying to implement any federation-related changes. It's not \nthat\n difficult, but I think \"here be dragons\" applies because it's easy to break.", 
+            "title": "Contribution guide"
+        }, 
+        {
+            "location": "/Contributing/Contribution-guide/#development-tips", 
+            "text": "You can use a localhost- world tunneling service like ngrok if you want to test federation,  however  that should not be your primary mode of operation. If you want to have a permanently federating server, set up a proper instance on a VPS with a domain name, and simply keep it up to date with your own fork of the project while doing development on localhost.   Ngrok and similar services give you a random domain on each start up. This is good enough to test how the code you're working on handles real-world situations. But as soon as your domain changes, for everybody else concerned you're a different instance than before.  Generally, federation bits are tricky to work on for exactly this reason - it's hard to test. And when you are testing with a disposable instance you are polluting the databases of the real servers you're testing against, usually not a big deal but can be annoying. The way I have handled this so far was thus: I have used ngrok for one session, and recorded the exchanges from its web interface to create fixtures and test suites. From then on I've been working with those rather than live servers.  I advise to study the existing code and the RFCs before trying to implement any federation-related changes. It's not  that  difficult, but I think \"here be dragons\" applies because it's easy to break.", 
+            "title": "Development tips"
+        }, 
+        {
+            "location": "/Contributing/Translating/", 
+            "text": "If you want to localise Mastodon into your language, here is how.\n\n\nThere are two parts to Mastodon, the server and the web client. The translations for the web client are in \napp/assets/javascripts/components/locales\n. For the server-side, the translations live in \nconfig/locales\n and are divided into different files. Here are all the files you\u2019ll need to translate:\n\n\n\n\n\n\n\n\nOriginal file (English)\n\n\nLocation\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nen.jsx\n\n\napp/assets/javascripts/components/locales/en.jsx\n\n\nStrings for the web client\n\n\n\n\n\n\nen.yml\n\n\nconfig/locales/en.yml\n\n\nStrings for general use\n\n\n\n\n\n\nsimple_form.en.yml\n\n\nconfig/locales/simple_form.en.yml\n\n\nStrings for the settings area\n\n\n\n\n\n\ndevise.en.yml\n\n\nconfig/locales/devise.en.yml\n\n\nGeneric strings for Devise\n\n\n\n\n\n\ndoorkeeper.en.yml\n\n\nconfig/locales/doorkeeper.en.yml\n\n\nGeneric strings for Doorkeeper\n\n\n\n\n\n\n\n\nTranslating\n\n\nIf you use Github, first clone the Mastodon repository to your account.\n\n\n\n\nDuplicate the files in their folder and replace \nen\n in the filenames by your language\u2019s standard two-letters code (\nISO 639-1\n).\n\n   For instance \nsimple_form.en.yml\n becomes \nsimple_form.es.yml\n in the Spanish translation.\n\n\nAlso replace the language code in the first lines of all the files, and the last line of the \n.jsx\n file.\n\n\nTranslate the right-side values from English to your language. Keep the indentation and punctuation.\n\n\n\n\nSince Devise and Doorkeeper are popular libraries, there may already be translation files for your language available on the Internet.\n\n\nDeclaring the language\n\n\nThe locales are mentioned in several other files. To activate your translation, add your language code to the different lists present in these files:\n\n\n\n\n\n\n\n\nFile\n\n\nLocation\n\n\nComment\n\n\n\n\n\n\n\n\n\n\nindex.jsx\n\n\napp/assets/javascripts/components/locales/index.jsx\n\n\n2 lines to add\n\n\n\n\n\n\nmastodon.jsx\n\n\napp/assets/javascripts/components/containers/mastodon.jsx\n\n\n1 line to add + 1 list to complete\n\n\n\n\n\n\nsettings_helper.rb\n\n\napp/helpers/settings_helper.rb\n\n\n1 line to add + your language\u2019s name\n\n\n\n\n\n\napplication.rb\n\n\nconfig/application.rb\n\n\n1 list to complete\n\n\n\n\n\n\n\n\nSending the translation\n\n\nYou can then push the files to git and submit a pull request.\n\n\nTesting the translation\n\n\nOnce the pull request is accepted, wait for the code to be deployed on a Mastodon instance. Log-in with your account there, and change the locale in the settings. Browse and use the website. See if everything makes sense in context and if anything seems out of place or breaks the layout. Invite other Mastodon users speaking your language to try it and give feedback. Make changes accordingly and update the translation.\n\n\nUpdating the translation\n\n\nKeep an eye on the original English files in \napp/assets/javascripts/components/locales\n and \nconfig/locales\n. When they are updated, pass on the changes to your language files. For new strings, add the new lines to the same position and translate them. Once you\u2019re finished with the updates, you can submit a new pull request.", 
+            "title": "Translating"
+        }, 
+        {
+            "location": "/Contributing/Translating/#translating", 
+            "text": "If you use Github, first clone the Mastodon repository to your account.   Duplicate the files in their folder and replace  en  in the filenames by your language\u2019s standard two-letters code ( ISO 639-1 ). \n   For instance  simple_form.en.yml  becomes  simple_form.es.yml  in the Spanish translation.  Also replace the language code in the first lines of all the files, and the last line of the  .jsx  file.  Translate the right-side values from English to your language. Keep the indentation and punctuation.   Since Devise and Doorkeeper are popular libraries, there may already be translation files for your language available on the Internet.", 
+            "title": "Translating"
+        }, 
+        {
+            "location": "/Contributing/Translating/#declaring-the-language", 
+            "text": "The locales are mentioned in several other files. To activate your translation, add your language code to the different lists present in these files:     File  Location  Comment      index.jsx  app/assets/javascripts/components/locales/index.jsx  2 lines to add    mastodon.jsx  app/assets/javascripts/components/containers/mastodon.jsx  1 line to add + 1 list to complete    settings_helper.rb  app/helpers/settings_helper.rb  1 line to add + your language\u2019s name    application.rb  config/application.rb  1 list to complete", 
+            "title": "Declaring the language"
+        }, 
+        {
+            "location": "/Contributing/Translating/#sending-the-translation", 
+            "text": "You can then push the files to git and submit a pull request.", 
+            "title": "Sending the translation"
+        }, 
+        {
+            "location": "/Contributing/Translating/#testing-the-translation", 
+            "text": "Once the pull request is accepted, wait for the code to be deployed on a Mastodon instance. Log-in with your account there, and change the locale in the settings. Browse and use the website. See if everything makes sense in context and if anything seems out of place or breaks the layout. Invite other Mastodon users speaking your language to try it and give feedback. Make changes accordingly and update the translation.", 
+            "title": "Testing the translation"
+        }, 
+        {
+            "location": "/Contributing/Translating/#updating-the-translation", 
+            "text": "Keep an eye on the original English files in  app/assets/javascripts/components/locales  and  config/locales . When they are updated, pass on the changes to your language files. For new strings, add the new lines to the same position and translate them. Once you\u2019re finished with the updates, you can submit a new pull request.", 
+            "title": "Updating the translation"
+        }, 
+        {
+            "location": "/Developing/API/", 
+            "text": "Contents\n\n\n\n\nAvailable libraries\n\n\nNotes\n\n\nMethods\n\n\nPosting a status\n\n\nUploading media\n\n\nRetrieving a timeline\n\n\nRetrieving notifications\n\n\nFollowing a remote user\n\n\nFetching data\n\n\nDeleting a status\n\n\nReblogging a status\n\n\nFavouriting a status\n\n\nThreads (status context)\n\n\nWho reblogged/favourited a status\n\n\nFollowing/unfollowing accounts\n\n\nBlocking/unblocking accounts\n\n\nCreating OAuth apps\n\n\nEntities\n\n\nStatus\n\n\nAccount\n\n\nPagination\n\n\n\n\nAvailable libraries\n\n\n\n\nFor Ruby\n\n\nFor Python\n\n\nFor JavaScript\n\n\nFor JavaScript (Node.js)\n\n\n\n\nNotes\n\n\nWhen an array parameter is mentioned, the Rails convention of specifying array parameters in query strings is meant. For example, a ruby array like \nfoo = [1, 2, 3]\n can be encoded in the params as \nfoo[]=1\nfoo[]=2\nfoo[]=3\n. Square brackets can be indexed but can also be empty.\n\n\nWhen a file parameter is mentioned, a form-encoded upload is expected.\n\n\nMethods\n\n\nPosting a new status\n\n\nPOST /api/v1/statuses\n\n\nForm data:\n\n\n\n\nstatus\n: The text of the status\n\n\nin_reply_to_id\n (optional): local ID of the status you want to reply to\n\n\nmedia_ids\n (optional): array of media IDs to attach to the status (maximum 4)\n\n\nsensitive\n (optional): set this to mark the media of the status as NSFW\n\n\nvisibility\n (optional): either \nprivate\n, \nunlisted\n or \npublic\n\n\n\n\nReturns the new status.\n\n\nPOST /api/v1/media\n\n\nForm data:\n\n\n\n\nfile\n: Image to be uploaded\n\n\n\n\nReturns a media object with an ID that can be attached when creating a status (see above).\n\n\nRetrieving a timeline\n\n\nGET /api/v1/timelines/home\n\n\nGET /api/v1/timelines/mentions\n\n\nGET /api/v1/timelines/public\n\n\nGET /api/v1/timelines/tag/:hashtag\n\n\nReturns statuses, most recent ones first. Home timeline is statuses from people you follow, mentions timeline is all statuses that mention you. Public timeline is \"whole known network\", and the last is the hashtag timeline.\n\n\nQuery parameters:\n\n\n\n\nmax_id\n (optional): Skip statuses younger than ID (e.g. navigate backwards in time)\n\n\nsince_id\n (optional): Skip statuses older than ID (e.g. check for updates)\n\n\n\n\nNotifications\n\n\nGET /api/v1/notifications\n\n\nReturns notifications for the authenticated user. Each notification has an \nid\n, a \ntype\n (mention, reblog, favourite, follow), an \naccount\n which it came \nfrom\n, and in case of mention, reblog and favourite also a \nstatus\n.\n\n\nFollowing a remote user\n\n\nPOST /api/v1/follows\n\n\nForm data:\n\n\n\n\nuri: username@domain of the person you want to follow\n\n\n\n\nReturns the local representation of the followed account.\n\n\nFetching data\n\n\nGET /api/v1/statuses/:id\n\n\nReturns status.\n\n\nGET /api/v1/accounts/:id\n\n\nReturns account.\n\n\nGET /api/v1/accounts/verify_credentials\n\n\nReturns authenticated user's account.\n\n\nGET /api/v1/accounts/:id/statuses\n\n\nReturns statuses by user. Same options as timeline are permitted.\n\n\nGET /api/v1/accounts/:id/following\n\n\nReturns users the given user is following.\n\n\nGET /api/v1/accounts/:id/followers\n\n\nReturns users the given user is followed by.\n\n\nGET /api/v1/accounts/relationships\n\n\nReturns relationships (\nfollowing\n, \nfollowed_by\n, \nblocking\n) of the current user to a list of given accounts.\n\n\nQuery parameters:\n\n\n\n\nid\n (can be array): Account IDs\n\n\n\n\nGET /api/v1/accounts/search\n\n\nReturns matching accounts. Will lookup an account remotely if the search term is in the username@domain format and not yet in the database.\n\n\nQuery parameters:\n\n\n\n\nq\n: what to search for\n\n\nlimit\n: maximum number of matching accounts to return\n\n\n\n\nGET /api/v1/blocks\n\n\nReturns accounts blocked by authenticated user.\n\n\nGET /api/v1/favourites\n\n\nReturns statuses favourited by authenticated user.\n\n\nDeleting a status\n\n\nDELETE /api/v1/statuses/:id\n\n\nReturns an empty object.\n\n\nReblogging a status\n\n\nPOST /api/v1/statuses/:id/reblog\n\n\nReturns a new status that wraps around the reblogged one.\n\n\nUnreblogging a status\n\n\nPOST /api/v1/statuses/:id/unreblog\n\n\nReturns the status that used to be reblogged.\n\n\nFavouriting a status\n\n\nPOST /api/v1/statuses/:id/favourite\n\n\nReturns the target status.\n\n\nUnfavouriting a status\n\n\nPOST /api/v1/statuses/:id/unfavourite\n\n\nReturns the target status.\n\n\nThreads\n\n\nGET /api/v1/statuses/:id/context\n\n\nReturns \nancestors\n and \ndescendants\n of the status.\n\n\nWho reblogged/favourited a status\n\n\nGET /api/v1/statuses/:id/reblogged_by\n\n\nGET /api/v1/statuses/:id/favourited_by\n\n\nReturns list of accounts.\n\n\nFollowing and unfollowing users\n\n\nPOST /api/v1/accounts/:id/follow\n\n\nPOST /api/v1/accounts/:id/unfollow\n\n\nReturns the updated relationship to the user.\n\n\nBlocking and unblocking users\n\n\nPOST /api/v1/accounts/:id/block\n\n\nPOST /api/v1/accounts/:id/unblock\n\n\nReturns the updated relationship to the user.\n\n\nOAuth apps\n\n\nPOST /api/v1/apps\n\n\nForm data:\n\n\n\n\nclient_name\n: Name of your application\n\n\nredirect_uris\n: Where the user should be redirected after authorization (for no redirect, use \nurn:ietf:wg:oauth:2.0:oob\n)\n\n\nscopes\n: This can be a space-separated list of the following items: \"read\", \"write\" and \"follow\" (see \nthis page\n for details on what the scopes do)\n\n\nwebsite\n: (optional) URL to the homepage of your app\n\n\n\n\nCreates a new OAuth app. Returns \nid\n, \nclient_id\n and \nclient_secret\n which can be used with \nOAuth authentication in your 3rd party app\n.\n\n\n\n\nEntities\n\n\nStatus\n\n\n\n\n\n\n\n\nAttribute\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nid\n\n\n\n\n\n\n\n\nuri\n\n\nfediverse-unique resource ID\n\n\n\n\n\n\nurl\n\n\nURL to the status page (can be remote)\n\n\n\n\n\n\naccount\n\n\nAccount\n\n\n\n\n\n\nin_reply_to_id\n\n\nnull or ID of status it replies to\n\n\n\n\n\n\nreblog\n\n\nnull or Status\n\n\n\n\n\n\ncontent\n\n\nBody of the status. This will contain HTML (remote HTML already sanitized)\n\n\n\n\n\n\ncreated_at\n\n\n\n\n\n\n\n\nreblogs_count\n\n\n\n\n\n\n\n\nfavourites_count\n\n\n\n\n\n\n\n\nreblogged\n\n\nBoolean for authenticated user\n\n\n\n\n\n\nfavourited\n\n\nBoolean for authenticated user\n\n\n\n\n\n\nmedia_attachments\n\n\narray of MediaAttachments\n\n\n\n\n\n\nmentions\n\n\narray of Mentions\n\n\n\n\n\n\napplication\n\n\nApplication from which the status was posted\n\n\n\n\n\n\n\n\nMedia Attachment:\n\n\n\n\n\n\n\n\nAttribute\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nurl\n\n\nURL of the original image (can be remote)\n\n\n\n\n\n\npreview_url\n\n\nURL of the preview image\n\n\n\n\n\n\ntype\n\n\nImage or video\n\n\n\n\n\n\n\n\nMention:\n\n\n\n\n\n\n\n\nAttribute\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nurl\n\n\nURL of user's profile (can be remote)\n\n\n\n\n\n\nacct\n\n\nUsername for local or username@domain for remote users\n\n\n\n\n\n\nid\n\n\nAccount ID\n\n\n\n\n\n\n\n\nApplication:\n\n\n\n\n\n\n\n\nAttribute\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nname\n\n\nName of the app\n\n\n\n\n\n\nwebsite\n\n\nHomepage URL of the app\n\n\n\n\n\n\n\n\nAccount\n\n\n\n\n\n\n\n\nAttribute\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nid\n\n\n\n\n\n\n\n\nusername\n\n\n\n\n\n\n\n\nacct\n\n\nEquals username for local users, includes @domain for remote ones\n\n\n\n\n\n\ndisplay_name\n\n\n\n\n\n\n\n\nnote\n\n\nBiography of user\n\n\n\n\n\n\nurl\n\n\nURL of the user's profile page (can be remote)\n\n\n\n\n\n\navatar\n\n\nURL to the avatar image\n\n\n\n\n\n\nheader\n\n\nURL to the header image\n\n\n\n\n\n\nfollowers_count\n\n\n\n\n\n\n\n\nfollowing_count\n\n\n\n\n\n\n\n\nstatuses_count\n\n\n\n\n\n\n\n\n\n\nPagination\n\n\nAPI methods that return collections of items can return a \nLink\n header containing URLs for the \nnext\n and \nprev\n pages. \nLink header RFC", 
+            "title": "API"
+        }, 
+        {
+            "location": "/Developing/API/#contents", 
+            "text": "Available libraries  Notes  Methods  Posting a status  Uploading media  Retrieving a timeline  Retrieving notifications  Following a remote user  Fetching data  Deleting a status  Reblogging a status  Favouriting a status  Threads (status context)  Who reblogged/favourited a status  Following/unfollowing accounts  Blocking/unblocking accounts  Creating OAuth apps  Entities  Status  Account  Pagination", 
+            "title": "Contents"
+        }, 
+        {
+            "location": "/Developing/API/#available-libraries", 
+            "text": "For Ruby  For Python  For JavaScript  For JavaScript (Node.js)", 
+            "title": "Available libraries"
+        }, 
+        {
+            "location": "/Developing/API/#notes", 
+            "text": "When an array parameter is mentioned, the Rails convention of specifying array parameters in query strings is meant. For example, a ruby array like  foo = [1, 2, 3]  can be encoded in the params as  foo[]=1 foo[]=2 foo[]=3 . Square brackets can be indexed but can also be empty.  When a file parameter is mentioned, a form-encoded upload is expected.", 
+            "title": "Notes"
+        }, 
+        {
+            "location": "/Developing/API/#methods", 
+            "text": "", 
+            "title": "Methods"
+        }, 
+        {
+            "location": "/Developing/API/#posting-a-new-status", 
+            "text": "POST /api/v1/statuses  Form data:   status : The text of the status  in_reply_to_id  (optional): local ID of the status you want to reply to  media_ids  (optional): array of media IDs to attach to the status (maximum 4)  sensitive  (optional): set this to mark the media of the status as NSFW  visibility  (optional): either  private ,  unlisted  or  public   Returns the new status.  POST /api/v1/media  Form data:   file : Image to be uploaded   Returns a media object with an ID that can be attached when creating a status (see above).", 
+            "title": "Posting a new status"
+        }, 
+        {
+            "location": "/Developing/API/#retrieving-a-timeline", 
+            "text": "GET /api/v1/timelines/home  GET /api/v1/timelines/mentions  GET /api/v1/timelines/public  GET /api/v1/timelines/tag/:hashtag  Returns statuses, most recent ones first. Home timeline is statuses from people you follow, mentions timeline is all statuses that mention you. Public timeline is \"whole known network\", and the last is the hashtag timeline.  Query parameters:   max_id  (optional): Skip statuses younger than ID (e.g. navigate backwards in time)  since_id  (optional): Skip statuses older than ID (e.g. check for updates)", 
+            "title": "Retrieving a timeline"
+        }, 
+        {
+            "location": "/Developing/API/#notifications", 
+            "text": "GET /api/v1/notifications  Returns notifications for the authenticated user. Each notification has an  id , a  type  (mention, reblog, favourite, follow), an  account  which it came  from , and in case of mention, reblog and favourite also a  status .", 
+            "title": "Notifications"
+        }, 
+        {
+            "location": "/Developing/API/#following-a-remote-user", 
+            "text": "POST /api/v1/follows  Form data:   uri: username@domain of the person you want to follow   Returns the local representation of the followed account.", 
+            "title": "Following a remote user"
+        }, 
+        {
+            "location": "/Developing/API/#fetching-data", 
+            "text": "GET /api/v1/statuses/:id  Returns status.  GET /api/v1/accounts/:id  Returns account.  GET /api/v1/accounts/verify_credentials  Returns authenticated user's account.  GET /api/v1/accounts/:id/statuses  Returns statuses by user. Same options as timeline are permitted.  GET /api/v1/accounts/:id/following  Returns users the given user is following.  GET /api/v1/accounts/:id/followers  Returns users the given user is followed by.  GET /api/v1/accounts/relationships  Returns relationships ( following ,  followed_by ,  blocking ) of the current user to a list of given accounts.  Query parameters:   id  (can be array): Account IDs   GET /api/v1/accounts/search  Returns matching accounts. Will lookup an account remotely if the search term is in the username@domain format and not yet in the database.  Query parameters:   q : what to search for  limit : maximum number of matching accounts to return   GET /api/v1/blocks  Returns accounts blocked by authenticated user.  GET /api/v1/favourites  Returns statuses favourited by authenticated user.", 
+            "title": "Fetching data"
+        }, 
+        {
+            "location": "/Developing/API/#deleting-a-status", 
+            "text": "DELETE /api/v1/statuses/:id  Returns an empty object.", 
+            "title": "Deleting a status"
+        }, 
+        {
+            "location": "/Developing/API/#reblogging-a-status", 
+            "text": "POST /api/v1/statuses/:id/reblog  Returns a new status that wraps around the reblogged one.", 
+            "title": "Reblogging a status"
+        }, 
+        {
+            "location": "/Developing/API/#unreblogging-a-status", 
+            "text": "POST /api/v1/statuses/:id/unreblog  Returns the status that used to be reblogged.", 
+            "title": "Unreblogging a status"
+        }, 
+        {
+            "location": "/Developing/API/#favouriting-a-status", 
+            "text": "POST /api/v1/statuses/:id/favourite  Returns the target status.", 
+            "title": "Favouriting a status"
+        }, 
+        {
+            "location": "/Developing/API/#unfavouriting-a-status", 
+            "text": "POST /api/v1/statuses/:id/unfavourite  Returns the target status.", 
+            "title": "Unfavouriting a status"
+        }, 
+        {
+            "location": "/Developing/API/#threads", 
+            "text": "GET /api/v1/statuses/:id/context  Returns  ancestors  and  descendants  of the status.", 
+            "title": "Threads"
+        }, 
+        {
+            "location": "/Developing/API/#who-rebloggedfavourited-a-status", 
+            "text": "GET /api/v1/statuses/:id/reblogged_by  GET /api/v1/statuses/:id/favourited_by  Returns list of accounts.", 
+            "title": "Who reblogged/favourited a status"
+        }, 
+        {
+            "location": "/Developing/API/#following-and-unfollowing-users", 
+            "text": "POST /api/v1/accounts/:id/follow  POST /api/v1/accounts/:id/unfollow  Returns the updated relationship to the user.", 
+            "title": "Following and unfollowing users"
+        }, 
+        {
+            "location": "/Developing/API/#blocking-and-unblocking-users", 
+            "text": "POST /api/v1/accounts/:id/block  POST /api/v1/accounts/:id/unblock  Returns the updated relationship to the user.", 
+            "title": "Blocking and unblocking users"
+        }, 
+        {
+            "location": "/Developing/API/#oauth-apps", 
+            "text": "POST /api/v1/apps  Form data:   client_name : Name of your application  redirect_uris : Where the user should be redirected after authorization (for no redirect, use  urn:ietf:wg:oauth:2.0:oob )  scopes : This can be a space-separated list of the following items: \"read\", \"write\" and \"follow\" (see  this page  for details on what the scopes do)  website : (optional) URL to the homepage of your app   Creates a new OAuth app. Returns  id ,  client_id  and  client_secret  which can be used with  OAuth authentication in your 3rd party app .", 
+            "title": "OAuth apps"
+        }, 
+        {
+            "location": "/Developing/API/#entities", 
+            "text": "", 
+            "title": "Entities"
+        }, 
+        {
+            "location": "/Developing/API/#status", 
+            "text": "Attribute  Description      id     uri  fediverse-unique resource ID    url  URL to the status page (can be remote)    account  Account    in_reply_to_id  null or ID of status it replies to    reblog  null or Status    content  Body of the status. This will contain HTML (remote HTML already sanitized)    created_at     reblogs_count     favourites_count     reblogged  Boolean for authenticated user    favourited  Boolean for authenticated user    media_attachments  array of MediaAttachments    mentions  array of Mentions    application  Application from which the status was posted     Media Attachment:     Attribute  Description      url  URL of the original image (can be remote)    preview_url  URL of the preview image    type  Image or video     Mention:     Attribute  Description      url  URL of user's profile (can be remote)    acct  Username for local or username@domain for remote users    id  Account ID     Application:     Attribute  Description      name  Name of the app    website  Homepage URL of the app", 
+            "title": "Status"
+        }, 
+        {
+            "location": "/Developing/API/#account", 
+            "text": "Attribute  Description      id     username     acct  Equals username for local users, includes @domain for remote ones    display_name     note  Biography of user    url  URL of the user's profile page (can be remote)    avatar  URL to the avatar image    header  URL to the header image    followers_count     following_count     statuses_count", 
+            "title": "Account"
+        }, 
+        {
+            "location": "/Developing/API/#pagination", 
+            "text": "API methods that return collections of items can return a  Link  header containing URLs for the  next  and  prev  pages.  Link header RFC", 
+            "title": "Pagination"
+        }, 
+        {
+            "location": "/Developing/OAuth-details/", 
+            "text": "We use the \nDoorkeeper gem for OAuth\n, so you can refer to their docs on specifics of the end-points.\n\n\nThe API is divided up into access scopes:\n\n\n\n\nread\n: Read data\n\n\nwrite\n: Post statuses and upload media for statuses\n\n\nfollow\n: Follow, unfollow, block, unblock\n\n\n\n\nMultiple scopes can be requested during the authorization phase with the \nscope\n query param (space-separate the scopes).", 
+            "title": "OAuth details"
+        }, 
+        {
+            "location": "/Developing/Testing-with-cURL/", 
+            "text": "Mastodon builds around the idea of being a server first, rather than a client itself. Similarly to how a XMPP chat server communicates with others and with its own clients, Mastodon takes care of federation to other networks, like other Mastodon or GNU Social instances. So Mastodon provides a REST API, and a 3rd-party app system for using it via OAuth2.\n\n\nYou can get a client ID and client secret required for OAuth \nvia an API end-point\n.\n\n\nFrom these two, you will need to acquire an access token. It is possible to do using your account's e-mail and password like this:\n\n\ncurl -X POST -d \"client_id=CLIENT_ID_HERE\nclient_secret=CLIENT_SECRET_HERE\ngrant_type=password\nusername=YOUR_EMAIL\npassword=YOUR_PASSWORD\" -Ss https://mastodon.social/oauth/token\n\n\n\nThe response will be a JSON object containing the key \naccess_token\n. Use that token in any API requests by setting a header like this:\n\n\ncurl --header \"Authorization: Bearer ACCESS_TOKEN_HERE\" -sS https://mastodon.social/api/statuses/home\n\n\n\nPlease note that the password-based approach is not recommended especially if you're dealing with other user's accounts and not just your own. Usually you would use the authorization grant approach where you redirect the user to a web page on the original site where they can login and authorize the application and are then redirected back to your application with an access code.", 
+            "title": "Testing with cURL"
+        }, 
+        {
+            "location": "/Developing/Tips-for-app-developers/", 
+            "text": "Authentication\n\n\nMake sure that you allow your users to specify the domain they want to connect to before login. Use that domain to acquire a client id/secret for OAuth2 and then proceed with normal OAuth2 also using that domain to build the URLs.\n\n\nIn my opinion it is easier for people to understand what is being asked of them if you ask for a \nusername@domain\n type input, since it looks like an e-mail address. Though the username part is not required for anything in the OAuth2 process. Once the user is logged in, you get information about the logged in user from \n/api/v1/accounts/verify_credentials\n\n\nUsernames\n\n\nMake sure that you make it possible to see the \nacct\n of any user in your app (since it includes the domain part for remote users), people must be able to tell apart users from different domains with the same username.\n\n\nFormatting\n\n\nThe API delivers already formatted HTML to your app. This isn't ideal since not all apps are based on HTML, but this is not fixable as its part of the way OStatus federation works. Most importantly, you get some information on linked entities alongside the HTML of the status body. For example, you get a list of mentioned users, and a list of media attachments, and a list of hashtags. It is possible to convert the HTML to whatever you need in your app by parsing the HTML tags and matching their \nhref\ns to the linked entities. If a match cannot be found, the link must stay a clickable link.", 
+            "title": "Tips for app developers"
+        }, 
+        {
+            "location": "/Developing/Tips-for-app-developers/#authentication", 
+            "text": "Make sure that you allow your users to specify the domain they want to connect to before login. Use that domain to acquire a client id/secret for OAuth2 and then proceed with normal OAuth2 also using that domain to build the URLs.  In my opinion it is easier for people to understand what is being asked of them if you ask for a  username@domain  type input, since it looks like an e-mail address. Though the username part is not required for anything in the OAuth2 process. Once the user is logged in, you get information about the logged in user from  /api/v1/accounts/verify_credentials", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/Developing/Tips-for-app-developers/#usernames", 
+            "text": "Make sure that you make it possible to see the  acct  of any user in your app (since it includes the domain part for remote users), people must be able to tell apart users from different domains with the same username.", 
+            "title": "Usernames"
+        }, 
+        {
+            "location": "/Developing/Tips-for-app-developers/#formatting", 
+            "text": "The API delivers already formatted HTML to your app. This isn't ideal since not all apps are based on HTML, but this is not fixable as its part of the way OStatus federation works. Most importantly, you get some information on linked entities alongside the HTML of the status body. For example, you get a list of mentioned users, and a list of media attachments, and a list of hashtags. It is possible to convert the HTML to whatever you need in your app by parsing the HTML tags and matching their  href s to the linked entities. If a match cannot be found, the link must stay a clickable link.", 
+            "title": "Formatting"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/", 
+            "text": "Nginx\n\n\nRegardless of whether you go with the Docker approach or not, here is an example Nginx server configuration:\n\n\nmap $http_upgrade $connection_upgrade {\n  default upgrade;\n  ''      close;\n}\n\nserver {\n  listen 443 ssl;\n  server_name example.com;\n\n  ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;\n  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;\n\n  keepalive_timeout    70;\n  sendfile             on;\n  client_max_body_size 0;\n  gzip off;\n\n  root /home/mastodon/live/public;\n\n  add_header Strict-Transport-Security \nmax-age=31536000; includeSubDomains\n;\n\n  location / {\n    try_files $uri @proxy;\n  }\n\n  location @proxy {\n    proxy_set_header Host $host;\n    proxy_set_header X-Real-IP $remote_addr;\n    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n    proxy_set_header X-Forwarded-Proto https;\n\n    proxy_pass_header Server;\n\n    proxy_pass http://localhost:3000;\n    proxy_buffering off;\n    proxy_redirect off;\n    proxy_http_version 1.1;\n    proxy_set_header Upgrade $http_upgrade;\n    proxy_set_header Connection $connection_upgrade;\n\n    tcp_nodelay on;\n  }\n\n  error_page 500 501 502 503 504 /500.html;\n}\n\n\n\n\nRunning in production without Docker\n\n\nIt is recommended to create a special user for mastodon on the server (you could call the user \nmastodon\n), though remember to disable outside login for it. You should only be able to get into that user through \nsudo su - mastodon\n.\n\n\nGeneral dependencies\n\n\ncurl -sL https://deb.nodesource.com/setup_4.x | sudo bash -\nsudo apt-get install imagemagick ffmpeg libpq-dev libxml2-dev libxslt1-dev nodejs\nsudo npm install -g yarn\n\n\n\nRedis\n\n\nsudo apt-get install redis-server redis-tools\n\n\n\nPostgres\n\n\nsudo apt-get install postgresql postgresql-contrib\n\n\n\nRbenv\n\n\nIt is recommended to use rbenv (exclusively from the \nmastodon\n user) to install the desired Ruby version. Follow the guides to \ninstall rbenv\n and \nrbenv-build\n (I recommend checking the \nprerequisites\n for your system on the rbenv-build project and installing them beforehand, obviously outside the unprivileged \nmastodon\n user)\n\n\nThen once \nrbenv\n is ready, run \nrbenv install 2.3.1\n to install the Ruby version for Mastodon.\n\n\nGit\n\n\nYou need the \ngit-core\n package installed on your system. If it is so, from the \nmastodon\n user:\n\n\ncd ~\ngit clone https://github.com/Gargron/mastodon.git live\ncd live\n\n\n\nThen you can proceed to install project dependencies:\n\n\ngem install bundler\nbundle install --deployment --without development test\nyarn install\n\n\n\nConfiguration\n\n\nThen you have to configure your instance:\n\n\ncp .env.production.sample .env.production\nnano .env.production\n\n\n\nFill in the important data, like host/port of the redis database, host/port/username/password of the postgres database, your domain name, SMTP details (e.g. from Mailgun or equivalent transactional e-mail service, many have free tiers), whether you intend to use SSL, etc. If you need to generate secrets, you can use:\n\n\nrake secret\n\n\n\nTo get a random string.\n\n\nSetup\n\n\nAnd setup the database for the first time, this will create the tables and basic data:\n\n\nRAILS_ENV=production bundle exec rails db:setup\n\n\n\nFinally, pre-compile all CSS and JavaScript files:\n\n\nRAILS_ENV=production bundle exec rails assets:precompile\n\n\n\nSystemd\n\n\nExample systemd configuration for the web workers, to be placed in \n/etc/systemd/system/mastodon-web.service\n:\n\n\n[Unit]\nDescription=mastodon-web\nAfter=network.target\n\n[Service]\nType=simple\nUser=mastodon\nWorkingDirectory=/home/mastodon/live\nEnvironment=\nRAILS_ENV=production\n\nEnvironment=\nPORT=3000\n\nExecStart=/home/mastodon/.rbenv/shims/bundle exec puma -C config/puma.rb\nTimeoutSec=15\nRestart=always\n\n[Install]\nWantedBy=multi-user.target\n\n\n\n\nExample systemd configuration for the background workers, to be placed in \n/etc/systemd/system/mastodon-sidekiq.service\n:\n\n\n[Unit]\nDescription=mastodon-sidekiq\nAfter=network.target\n\n[Service]\nType=simple\nUser=mastodon\nWorkingDirectory=/home/mastodon/live\nEnvironment=\nRAILS_ENV=production\n\nEnvironment=\nDB_POOL=5\n\nExecStart=/home/mastodon/.rbenv/shims/bundle exec sidekiq -c 5 -q default -q mailers -q push\nTimeoutSec=15\nRestart=always\n\n[Install]\nWantedBy=multi-user.target\n\n\n\n\nThis allows you to \nsudo systemctl enable mastodon-*.service\n and \nsudo systemctl start mastodon-*.service\n to get things going.\n\n\nCronjobs\n\n\nI recommend creating a couple cronjobs for the following tasks:\n\n\n\n\nRAILS_ENV=production bundle exec rake mastodon:media:clear\n\n\nRAILS_ENV=production bundle exec rake mastodon:push:refresh\n\n\nRAILS_ENV=production bundle exec rake mastodon:feeds:clear\n\n\n\n\nYou may want to run \nwhich bundle\n first and copypaste that full path instead of simply \nbundle\n in the above commands because cronjobs usually don't have all the paths set. The time and intervals of when to run these jobs are up to you, but once every day should be enough for all.\n\n\nYou can edit the cronjob file for the \nmastodon\n user by running \nsudo crontab -e mastodon\n (outside of the mastodon user).\n\n\nThings to look out for when upgrading Mastodon\n\n\nYou can upgrade Mastodon with a \ngit pull\n from the repository directory. You may need to run:\n\n\n\n\nRAILS_ENV=production bundle exec rails db:migrate\n\n\nRAILS_ENV=production bundle exec rails assets:precompile\n\n\n\n\nDepending on which files changed, e.g. if anything in the \n/db/\n or \n/app/assets\n directory changed, respectively. Also, Mastodon runs in memory, so you need to restart it before you see any changes. If you're using systemd, that would be:\n\n\nsudo systemctl restart mastodon-*.service", 
+            "title": "Production guide"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#nginx", 
+            "text": "Regardless of whether you go with the Docker approach or not, here is an example Nginx server configuration:  map $http_upgrade $connection_upgrade {\n  default upgrade;\n  ''      close;\n}\n\nserver {\n  listen 443 ssl;\n  server_name example.com;\n\n  ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;\n  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;\n\n  keepalive_timeout    70;\n  sendfile             on;\n  client_max_body_size 0;\n  gzip off;\n\n  root /home/mastodon/live/public;\n\n  add_header Strict-Transport-Security  max-age=31536000; includeSubDomains ;\n\n  location / {\n    try_files $uri @proxy;\n  }\n\n  location @proxy {\n    proxy_set_header Host $host;\n    proxy_set_header X-Real-IP $remote_addr;\n    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n    proxy_set_header X-Forwarded-Proto https;\n\n    proxy_pass_header Server;\n\n    proxy_pass http://localhost:3000;\n    proxy_buffering off;\n    proxy_redirect off;\n    proxy_http_version 1.1;\n    proxy_set_header Upgrade $http_upgrade;\n    proxy_set_header Connection $connection_upgrade;\n\n    tcp_nodelay on;\n  }\n\n  error_page 500 501 502 503 504 /500.html;\n}", 
+            "title": "Nginx"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#running-in-production-without-docker", 
+            "text": "It is recommended to create a special user for mastodon on the server (you could call the user  mastodon ), though remember to disable outside login for it. You should only be able to get into that user through  sudo su - mastodon .", 
+            "title": "Running in production without Docker"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#general-dependencies", 
+            "text": "curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -\nsudo apt-get install imagemagick ffmpeg libpq-dev libxml2-dev libxslt1-dev nodejs\nsudo npm install -g yarn", 
+            "title": "General dependencies"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#redis", 
+            "text": "sudo apt-get install redis-server redis-tools", 
+            "title": "Redis"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#postgres", 
+            "text": "sudo apt-get install postgresql postgresql-contrib", 
+            "title": "Postgres"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#rbenv", 
+            "text": "It is recommended to use rbenv (exclusively from the  mastodon  user) to install the desired Ruby version. Follow the guides to  install rbenv  and  rbenv-build  (I recommend checking the  prerequisites  for your system on the rbenv-build project and installing them beforehand, obviously outside the unprivileged  mastodon  user)  Then once  rbenv  is ready, run  rbenv install 2.3.1  to install the Ruby version for Mastodon.", 
+            "title": "Rbenv"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#git", 
+            "text": "You need the  git-core  package installed on your system. If it is so, from the  mastodon  user:  cd ~\ngit clone https://github.com/Gargron/mastodon.git live\ncd live  Then you can proceed to install project dependencies:  gem install bundler\nbundle install --deployment --without development test\nyarn install", 
+            "title": "Git"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#configuration", 
+            "text": "Then you have to configure your instance:  cp .env.production.sample .env.production\nnano .env.production  Fill in the important data, like host/port of the redis database, host/port/username/password of the postgres database, your domain name, SMTP details (e.g. from Mailgun or equivalent transactional e-mail service, many have free tiers), whether you intend to use SSL, etc. If you need to generate secrets, you can use:  rake secret  To get a random string.", 
+            "title": "Configuration"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#setup", 
+            "text": "And setup the database for the first time, this will create the tables and basic data:  RAILS_ENV=production bundle exec rails db:setup  Finally, pre-compile all CSS and JavaScript files:  RAILS_ENV=production bundle exec rails assets:precompile", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#systemd", 
+            "text": "Example systemd configuration for the web workers, to be placed in  /etc/systemd/system/mastodon-web.service :  [Unit]\nDescription=mastodon-web\nAfter=network.target\n\n[Service]\nType=simple\nUser=mastodon\nWorkingDirectory=/home/mastodon/live\nEnvironment= RAILS_ENV=production \nEnvironment= PORT=3000 \nExecStart=/home/mastodon/.rbenv/shims/bundle exec puma -C config/puma.rb\nTimeoutSec=15\nRestart=always\n\n[Install]\nWantedBy=multi-user.target  Example systemd configuration for the background workers, to be placed in  /etc/systemd/system/mastodon-sidekiq.service :  [Unit]\nDescription=mastodon-sidekiq\nAfter=network.target\n\n[Service]\nType=simple\nUser=mastodon\nWorkingDirectory=/home/mastodon/live\nEnvironment= RAILS_ENV=production \nEnvironment= DB_POOL=5 \nExecStart=/home/mastodon/.rbenv/shims/bundle exec sidekiq -c 5 -q default -q mailers -q push\nTimeoutSec=15\nRestart=always\n\n[Install]\nWantedBy=multi-user.target  This allows you to  sudo systemctl enable mastodon-*.service  and  sudo systemctl start mastodon-*.service  to get things going.", 
+            "title": "Systemd"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#cronjobs", 
+            "text": "I recommend creating a couple cronjobs for the following tasks:   RAILS_ENV=production bundle exec rake mastodon:media:clear  RAILS_ENV=production bundle exec rake mastodon:push:refresh  RAILS_ENV=production bundle exec rake mastodon:feeds:clear   You may want to run  which bundle  first and copypaste that full path instead of simply  bundle  in the above commands because cronjobs usually don't have all the paths set. The time and intervals of when to run these jobs are up to you, but once every day should be enough for all.  You can edit the cronjob file for the  mastodon  user by running  sudo crontab -e mastodon  (outside of the mastodon user).", 
+            "title": "Cronjobs"
+        }, 
+        {
+            "location": "/Running an instance/Production-guide/#things-to-look-out-for-when-upgrading-mastodon", 
+            "text": "You can upgrade Mastodon with a  git pull  from the repository directory. You may need to run:   RAILS_ENV=production bundle exec rails db:migrate  RAILS_ENV=production bundle exec rails assets:precompile   Depending on which files changed, e.g. if anything in the  /db/  or  /app/assets  directory changed, respectively. Also, Mastodon runs in memory, so you need to restart it before you see any changes. If you're using systemd, that would be:  sudo systemctl restart mastodon-*.service", 
+            "title": "Things to look out for when upgrading Mastodon"
+        }, 
+        {
+            "location": "/Using Mastodon/Apps/", 
+            "text": "Some people have started working on apps for the Mastodon API. Here is a list of them:\n\n\n\n\n\n\n\n\nApp\n\n\nPlatform\n\n\nLink\n\n\nDeveloper(s)\n\n\n\n\n\n\n\n\n\n\nMatodor\n\n\niOS/Android\n\n\nhttps://github.com/jeroensmeets/mastodon-app\n\n\n@jeroensmeets@mastodon.social\n\n\n\n\n\n\nTusky\n\n\nAndroid\n\n\nhttps://github.com/Vavassor/Tusky\n\n\n@Vavassor@mastodon.social\n\n\n\n\n\n\nAlbatross\n\n\niOS\n\n\n@goldie_ice@mastodon.social\n\n\n\n\n\n\n\n\ntootstream\n\n\ncommand-line\n\n\nhttps://github.com/magicalraccoon/tootstream\n\n\n@Raccoon@mastodon.social\n\n\n\n\n\n\nmastodroid\n\n\nAndroid\n\n\nhttps://github.com/alin-rautoiu/mastodroid\n\n\n\n\n\n\n\n\nTooter\n\n\nChrome extension\n\n\nhttps://github.com/ineffyble/tooter\n\n\n@effy@mastodon.social\n\n\n\n\n\n\n\n\nIf you have a project like this, let me know so I can add it to the list!", 
+            "title": "Apps"
+        }, 
+        {
+            "location": "/Using Mastodon/List-of-Mastodon-instances/", 
+            "text": "mastodon.social\n\n\nsocial.tchncs.de\n\n\non.vu\n\n\nanimalliberation.social\n\n\nsocially.constructed.space\n\n\nepiktistes.com\n\n\ntoot.zone\n\n\n\n\nLet me know if you start running one so I can add it to the list!", 
+            "title": "List of Mastodon instances"
+        }
+    ]
+}

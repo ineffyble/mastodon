@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/Home/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/About/FAQ/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/About/Specs-and-RFCs-used/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/About/Sponsors/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/Contributing/Contribution-guide/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Contributing/Translating/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/Developing/API/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Developing/OAuth-details/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Developing/Testing-with-cURL/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Developing/Tips-for-app-developers/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/Running an instance/Production-guide/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/Using Mastodon/Apps/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Using Mastodon/List-of-Mastodon-instances/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>

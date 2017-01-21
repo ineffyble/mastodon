@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Production guide - Mastodon</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Production guide";
+    var mkdocs_page_input_path = "Running an instance/Production-guide.md";
+    var mkdocs_page_url = "/Running an instance/Production-guide/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../Home/" class="icon icon-home"> Mastodon</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../Home/">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Specs-and-RFCs-used/">Specs and RFCs used</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Sponsors/">Sponsors</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributing/Contribution-guide/">Contribution guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributing/Translating/">Translating</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/API/">API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/OAuth-details/">OAuth details</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/Testing-with-cURL/">Testing with cURL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/Tips-for-app-developers/">Tips for app developers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Running an instance</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Production guide</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#nginx">Nginx</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#running-in-production-without-docker">Running in production without Docker</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#general-dependencies">General dependencies</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#redis">Redis</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#postgres">Postgres</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#rbenv">Rbenv</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#git">Git</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#configuration">Configuration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#setup">Setup</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#systemd">Systemd</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#cronjobs">Cronjobs</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#things-to-look-out-for-when-upgrading-mastodon">Things to look out for when upgrading Mastodon</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Mastodon</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/Apps/">Apps</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/List-of-Mastodon-instances/">List of Mastodon instances</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../Home/">Mastodon</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../Home/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Running an instance &raquo;</li>
+        
+      
+    
+    <li>Production guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="nginx">Nginx</h2>
+<p>Regardless of whether you go with the Docker approach or not, here is an example Nginx server configuration:</p>
+<pre><code class="nginx">map $http_upgrade $connection_upgrade {
+  default upgrade;
+  ''      close;
+}
+
+server {
+  listen 443 ssl;
+  server_name example.com;
+
+  ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+
+  keepalive_timeout    70;
+  sendfile             on;
+  client_max_body_size 0;
+  gzip off;
+
+  root /home/mastodon/live/public;
+
+  add_header Strict-Transport-Security &quot;max-age=31536000; includeSubDomains&quot;;
+
+  location / {
+    try_files $uri @proxy;
+  }
+
+  location @proxy {
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto https;
+
+    proxy_pass_header Server;
+
+    proxy_pass http://localhost:3000;
+    proxy_buffering off;
+    proxy_redirect off;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $connection_upgrade;
+
+    tcp_nodelay on;
+  }
+
+  error_page 500 501 502 503 504 /500.html;
+}
+</code></pre>
+
+<h2 id="running-in-production-without-docker">Running in production without Docker</h2>
+<p>It is recommended to create a special user for mastodon on the server (you could call the user <code>mastodon</code>), though remember to disable outside login for it. You should only be able to get into that user through <code>sudo su - mastodon</code>.</p>
+<h2 id="general-dependencies">General dependencies</h2>
+<pre><code>curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
+sudo apt-get install imagemagick ffmpeg libpq-dev libxml2-dev libxslt1-dev nodejs
+sudo npm install -g yarn
+</code></pre>
+<h2 id="redis">Redis</h2>
+<pre><code>sudo apt-get install redis-server redis-tools
+</code></pre>
+<h2 id="postgres">Postgres</h2>
+<pre><code>sudo apt-get install postgresql postgresql-contrib
+</code></pre>
+<h2 id="rbenv">Rbenv</h2>
+<p>It is recommended to use rbenv (exclusively from the <code>mastodon</code> user) to install the desired Ruby version. Follow the guides to <a href="https://github.com/rbenv/rbenv#installation">install rbenv</a> and <a href="https://github.com/rbenv/ruby-build#installation">rbenv-build</a> (I recommend checking the <a href="https://github.com/rbenv/ruby-build/wiki#suggested-build-environment">prerequisites</a> for your system on the rbenv-build project and installing them beforehand, obviously outside the unprivileged <code>mastodon</code> user)</p>
+<p>Then once <code>rbenv</code> is ready, run <code>rbenv install 2.3.1</code> to install the Ruby version for Mastodon.</p>
+<h2 id="git">Git</h2>
+<p>You need the <code>git-core</code> package installed on your system. If it is so, from the <code>mastodon</code> user:</p>
+<pre><code>cd ~
+git clone https://github.com/Gargron/mastodon.git live
+cd live
+</code></pre>
+<p>Then you can proceed to install project dependencies:</p>
+<pre><code>gem install bundler
+bundle install --deployment --without development test
+yarn install
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>Then you have to configure your instance:</p>
+<pre><code>cp .env.production.sample .env.production
+nano .env.production
+</code></pre>
+<p>Fill in the important data, like host/port of the redis database, host/port/username/password of the postgres database, your domain name, SMTP details (e.g. from Mailgun or equivalent transactional e-mail service, many have free tiers), whether you intend to use SSL, etc. If you need to generate secrets, you can use:</p>
+<pre><code>rake secret
+</code></pre>
+<p>To get a random string.</p>
+<h2 id="setup">Setup</h2>
+<p>And setup the database for the first time, this will create the tables and basic data:</p>
+<pre><code>RAILS_ENV=production bundle exec rails db:setup
+</code></pre>
+<p>Finally, pre-compile all CSS and JavaScript files:</p>
+<pre><code>RAILS_ENV=production bundle exec rails assets:precompile
+</code></pre>
+<h2 id="systemd">Systemd</h2>
+<p>Example systemd configuration for the web workers, to be placed in <code>/etc/systemd/system/mastodon-web.service</code>:</p>
+<pre><code class="systemd">[Unit]
+Description=mastodon-web
+After=network.target
+
+[Service]
+Type=simple
+User=mastodon
+WorkingDirectory=/home/mastodon/live
+Environment=&quot;RAILS_ENV=production&quot;
+Environment=&quot;PORT=3000&quot;
+ExecStart=/home/mastodon/.rbenv/shims/bundle exec puma -C config/puma.rb
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<p>Example systemd configuration for the background workers, to be placed in <code>/etc/systemd/system/mastodon-sidekiq.service</code>:</p>
+<pre><code class="systemd">[Unit]
+Description=mastodon-sidekiq
+After=network.target
+
+[Service]
+Type=simple
+User=mastodon
+WorkingDirectory=/home/mastodon/live
+Environment=&quot;RAILS_ENV=production&quot;
+Environment=&quot;DB_POOL=5&quot;
+ExecStart=/home/mastodon/.rbenv/shims/bundle exec sidekiq -c 5 -q default -q mailers -q push
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<p>This allows you to <code>sudo systemctl enable mastodon-*.service</code> and <code>sudo systemctl start mastodon-*.service</code> to get things going.</p>
+<h2 id="cronjobs">Cronjobs</h2>
+<p>I recommend creating a couple cronjobs for the following tasks:</p>
+<ul>
+<li><code>RAILS_ENV=production bundle exec rake mastodon:media:clear</code></li>
+<li><code>RAILS_ENV=production bundle exec rake mastodon:push:refresh</code></li>
+<li><code>RAILS_ENV=production bundle exec rake mastodon:feeds:clear</code></li>
+</ul>
+<p>You may want to run <code>which bundle</code> first and copypaste that full path instead of simply <code>bundle</code> in the above commands because cronjobs usually don't have all the paths set. The time and intervals of when to run these jobs are up to you, but once every day should be enough for all.</p>
+<p>You can edit the cronjob file for the <code>mastodon</code> user by running <code>sudo crontab -e mastodon</code> (outside of the mastodon user).</p>
+<h2 id="things-to-look-out-for-when-upgrading-mastodon">Things to look out for when upgrading Mastodon</h2>
+<p>You can upgrade Mastodon with a <code>git pull</code> from the repository directory. You may need to run:</p>
+<ul>
+<li><code>RAILS_ENV=production bundle exec rails db:migrate</code></li>
+<li><code>RAILS_ENV=production bundle exec rails assets:precompile</code></li>
+</ul>
+<p>Depending on which files changed, e.g. if anything in the <code>/db/</code> or <code>/app/assets</code> directory changed, respectively. Also, Mastodon runs in memory, so you need to restart it before you see any changes. If you're using systemd, that would be:</p>
+<pre><code>sudo systemctl restart mastodon-*.service
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Using Mastodon/Apps/" class="btn btn-neutral float-right" title="Apps">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Developing/Tips-for-app-developers/" class="btn btn-neutral" title="Tips for app developers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../Developing/Tips-for-app-developers/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Using Mastodon/Apps/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

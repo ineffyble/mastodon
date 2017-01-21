@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Translating - Mastodon</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Translating";
+    var mkdocs_page_input_path = "Contributing/Translating.md";
+    var mkdocs_page_url = "/Contributing/Translating/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../Home/" class="icon icon-home"> Mastodon</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../Home/">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Specs-and-RFCs-used/">Specs and RFCs used</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Sponsors/">Sponsors</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contribution-guide/">Contribution guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Translating</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#translating">Translating</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#declaring-the-language">Declaring the language</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#sending-the-translation">Sending the translation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#testing-the-translation">Testing the translation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#updating-the-translation">Updating the translation</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/API/">API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/OAuth-details/">OAuth details</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/Testing-with-cURL/">Testing with cURL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/Tips-for-app-developers/">Tips for app developers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Running an instance</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Running an instance/Production-guide/">Production guide</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Mastodon</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/Apps/">Apps</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/List-of-Mastodon-instances/">List of Mastodon instances</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../Home/">Mastodon</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../Home/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Contributing &raquo;</li>
+        
+      
+    
+    <li>Translating</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>If you want to localise Mastodon into your language, here is how.</p>
+<p>There are two parts to Mastodon, the server and the web client. The translations for the web client are in <code>app/assets/javascripts/components/locales</code>. For the server-side, the translations live in <code>config/locales</code> and are divided into different files. Here are all the files you’ll need to translate:</p>
+<table>
+<thead>
+<tr>
+<th>Original file (English)</th>
+<th>Location</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/app/assets/javascripts/components/locales/en.jsx"><code>en.jsx</code></a></td>
+<td><code>app/assets/javascripts/components/locales/en.jsx</code></td>
+<td>Strings for the web client</td>
+</tr>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/config/locales/en.yml"><code>en.yml</code></a></td>
+<td><code>config/locales/en.yml</code></td>
+<td>Strings for general use</td>
+</tr>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/config/locales/simple_form.en.yml"><code>simple_form.en.yml</code></a></td>
+<td><code>config/locales/simple_form.en.yml</code></td>
+<td>Strings for the settings area</td>
+</tr>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/config/locales/devise.en.yml"><code>devise.en.yml</code></a></td>
+<td><code>config/locales/devise.en.yml</code></td>
+<td>Generic strings for Devise</td>
+</tr>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/config/locales/doorkeeper.en.yml"><code>doorkeeper.en.yml</code></a></td>
+<td><code>config/locales/doorkeeper.en.yml</code></td>
+<td>Generic strings for Doorkeeper</td>
+</tr>
+</tbody>
+</table>
+<h2 id="translating">Translating</h2>
+<p>If you use Github, first clone the Mastodon repository to your account.</p>
+<ol>
+<li>Duplicate the files in their folder and replace <code>en</code> in the filenames by your language’s standard two-letters code (<a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a>).<br />
+   For instance <code>simple_form.en.yml</code> becomes <code>simple_form.es.yml</code> in the Spanish translation.</li>
+<li>Also replace the language code in the first lines of all the files, and the last line of the <code>.jsx</code> file.</li>
+<li>Translate the right-side values from English to your language. Keep the indentation and punctuation.</li>
+</ol>
+<p>Since Devise and Doorkeeper are popular libraries, there may already be translation files for your language available on the Internet.</p>
+<h2 id="declaring-the-language">Declaring the language</h2>
+<p>The locales are mentioned in several other files. To activate your translation, add your language code to the different lists present in these files:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Location</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/app/assets/javascripts/components/locales/index.jsx"><code>index.jsx</code></a></td>
+<td><code>app/assets/javascripts/components/locales/index.jsx</code></td>
+<td>2 lines to add</td>
+</tr>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/app/assets/javascripts/components/containers/mastodon.jsx"><code>mastodon.jsx</code></a></td>
+<td><code>app/assets/javascripts/components/containers/mastodon.jsx</code></td>
+<td>1 line to add + 1 list to complete</td>
+</tr>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/app/helpers/settings_helper.rb"><code>settings_helper.rb</code></a></td>
+<td><code>app/helpers/settings_helper.rb</code></td>
+<td>1 line to add + your language’s name</td>
+</tr>
+<tr>
+<td><a href="../../Gargron/mastodon/tree/master/config/application.rb"><code>application.rb</code></a></td>
+<td><code>config/application.rb</code></td>
+<td>1 list to complete</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sending-the-translation">Sending the translation</h2>
+<p>You can then push the files to git and submit a pull request.</p>
+<h2 id="testing-the-translation">Testing the translation</h2>
+<p>Once the pull request is accepted, wait for the code to be deployed on a Mastodon instance. Log-in with your account there, and change the locale in the settings. Browse and use the website. See if everything makes sense in context and if anything seems out of place or breaks the layout. Invite other Mastodon users speaking your language to try it and give feedback. Make changes accordingly and update the translation.</p>
+<h2 id="updating-the-translation">Updating the translation</h2>
+<p>Keep an eye on the original English files in <code>app/assets/javascripts/components/locales</code> and <code>config/locales</code>. When they are updated, pass on the changes to your language files. For new strings, add the new lines to the same position and translate them. Once you’re finished with the updates, you can submit a new pull request.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Developing/API/" class="btn btn-neutral float-right" title="API">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Contribution-guide/" class="btn btn-neutral" title="Contribution guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Contribution-guide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Developing/API/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Contribution guide - Mastodon</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Contribution guide";
+    var mkdocs_page_input_path = "Contributing/Contribution-guide.md";
+    var mkdocs_page_url = "/Contributing/Contribution-guide/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../Home/" class="icon icon-home"> Mastodon</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../Home/">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Specs-and-RFCs-used/">Specs and RFCs used</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Sponsors/">Sponsors</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributing</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Contribution guide</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#development-tips">Development tips</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Translating/">Translating</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/API/">API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/OAuth-details/">OAuth details</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/Testing-with-cURL/">Testing with cURL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Developing/Tips-for-app-developers/">Tips for app developers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Running an instance</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Running an instance/Production-guide/">Production guide</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Mastodon</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/Apps/">Apps</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/List-of-Mastodon-instances/">List of Mastodon instances</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../Home/">Mastodon</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../Home/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Contributing &raquo;</li>
+        
+      
+    
+    <li>Contribution guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><strong>Don't use Docker to do development</strong>. It's a quick way to get Mastodon running in production, it's <strong>really really inconvenient for development</strong>. Normally in Rails development environment you get hot reloading of backend code and on-the-fly compilation of assets like JS and CSS, but you lose those benefits by compiling a Docker image. If you want to contribute to Mastodon, it is worth it to simply set up a proper development environment.</p>
+<p>In fact, all you need is described in the <a href="https://github.com/Gargron/mastodon/wiki/Production-guide">production guide</a>, <strong>with the following exceptions</strong>. You <strong>don't</strong> need:</p>
+<ul>
+<li>Nginx</li>
+<li>SystemD</li>
+<li>An <code>.env.production</code> file. If you need to set any environment variables, you can use an <code>.env</code> file</li>
+<li>To prefix any commands with <code>RAILS_ENV=production</code> since the default environment is "development" anyway</li>
+<li>Any cronjobs</li>
+</ul>
+<p>The command to install project dependencies does not require any flags, i.e. simply</p>
+<pre><code>bundle install
+</code></pre>
+<p>By default the development environment wants to connect to a <code>mastodon_development</code> database on localhost using your user/ident to login to Postgres (i.e. not a md5 password)</p>
+<p>You can run Mastodon with:</p>
+<pre><code>rails s
+</code></pre>
+<p>And open <code>http://localhost:3000</code> in your browser. Background jobs run inline (aka synchronously) in the development environment, so you don't need to run a Sidekiq process.</p>
+<p>You can run tests with:</p>
+<pre><code>rspec
+</code></pre>
+<p>You can check localization status with:</p>
+<pre><code>i18n-tasks health
+</code></pre>
+<p>You can check code quality with:</p>
+<pre><code>rubocop
+</code></pre>
+<h2 id="development-tips">Development tips</h2>
+<p>You can use a localhost-&gt;world tunneling service like ngrok if you want to test federation, <strong>however</strong> that should not be your primary mode of operation. If you want to have a permanently federating server, set up a proper instance on a VPS with a domain name, and simply keep it up to date with your own fork of the project while doing development on localhost. </p>
+<p>Ngrok and similar services give you a random domain on each start up. This is good enough to test how the code you're working on handles real-world situations. But as soon as your domain changes, for everybody else concerned you're a different instance than before.</p>
+<p>Generally, federation bits are tricky to work on for exactly this reason - it's hard to test. And when you are testing with a disposable instance you are polluting the databases of the real servers you're testing against, usually not a big deal but can be annoying. The way I have handled this so far was thus: I have used ngrok for one session, and recorded the exchanges from its web interface to create fixtures and test suites. From then on I've been working with those rather than live servers.</p>
+<p>I advise to study the existing code and the RFCs before trying to implement any federation-related changes. It's not <em>that</em> difficult, but I think "here be dragons" applies because it's easy to break.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Translating/" class="btn btn-neutral float-right" title="Translating">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../About/Sponsors/" class="btn btn-neutral" title="Sponsors"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../About/Sponsors/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Translating/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

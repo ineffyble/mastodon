@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>API - Mastodon</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "API";
+    var mkdocs_page_input_path = "Developing/API.md";
+    var mkdocs_page_url = "/Developing/API/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../Home/" class="icon icon-home"> Mastodon</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../Home/">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Specs-and-RFCs-used/">Specs and RFCs used</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Sponsors/">Sponsors</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributing/Contribution-guide/">Contribution guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributing/Translating/">Translating</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developing</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">API</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#contents">Contents</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#available-libraries">Available libraries</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#notes">Notes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#methods">Methods</a></li>
+                
+                    <li><a class="toctree-l4" href="#posting-a-new-status">Posting a new status</a></li>
+                
+                    <li><a class="toctree-l4" href="#retrieving-a-timeline">Retrieving a timeline</a></li>
+                
+                    <li><a class="toctree-l4" href="#notifications">Notifications</a></li>
+                
+                    <li><a class="toctree-l4" href="#following-a-remote-user">Following a remote user</a></li>
+                
+                    <li><a class="toctree-l4" href="#fetching-data">Fetching data</a></li>
+                
+                    <li><a class="toctree-l4" href="#deleting-a-status">Deleting a status</a></li>
+                
+                    <li><a class="toctree-l4" href="#reblogging-a-status">Reblogging a status</a></li>
+                
+                    <li><a class="toctree-l4" href="#unreblogging-a-status">Unreblogging a status</a></li>
+                
+                    <li><a class="toctree-l4" href="#favouriting-a-status">Favouriting a status</a></li>
+                
+                    <li><a class="toctree-l4" href="#unfavouriting-a-status">Unfavouriting a status</a></li>
+                
+                    <li><a class="toctree-l4" href="#threads">Threads</a></li>
+                
+                    <li><a class="toctree-l4" href="#who-rebloggedfavourited-a-status">Who reblogged/favourited a status</a></li>
+                
+                    <li><a class="toctree-l4" href="#following-and-unfollowing-users">Following and unfollowing users</a></li>
+                
+                    <li><a class="toctree-l4" href="#blocking-and-unblocking-users">Blocking and unblocking users</a></li>
+                
+                    <li><a class="toctree-l4" href="#oauth-apps">OAuth apps</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#entities">Entities</a></li>
+                
+                    <li><a class="toctree-l4" href="#status">Status</a></li>
+                
+                    <li><a class="toctree-l4" href="#account">Account</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#pagination">Pagination</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../OAuth-details/">OAuth details</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Testing-with-cURL/">Testing with cURL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tips-for-app-developers/">Tips for app developers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Running an instance</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Running an instance/Production-guide/">Production guide</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Mastodon</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/Apps/">Apps</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/List-of-Mastodon-instances/">List of Mastodon instances</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../Home/">Mastodon</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../Home/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Developing &raquo;</li>
+        
+      
+    
+    <li>API</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#available-libraries">Available libraries</a></li>
+<li><a href="#notes">Notes</a></li>
+<li><a href="#methods">Methods</a></li>
+<li>Posting a status</li>
+<li>Uploading media</li>
+<li>Retrieving a timeline</li>
+<li>Retrieving notifications</li>
+<li>Following a remote user</li>
+<li>Fetching data</li>
+<li>Deleting a status</li>
+<li>Reblogging a status</li>
+<li>Favouriting a status</li>
+<li>Threads (status context)</li>
+<li>Who reblogged/favourited a status</li>
+<li>Following/unfollowing accounts</li>
+<li>Blocking/unblocking accounts</li>
+<li>Creating OAuth apps</li>
+<li><a href="#entities">Entities</a></li>
+<li>Status</li>
+<li>Account</li>
+<li><a href="#pagination">Pagination</a></li>
+</ul>
+<h1 id="available-libraries">Available libraries</h1>
+<ul>
+<li><a href="https://github.com/Gargron/mastodon-api">For Ruby</a></li>
+<li><a href="https://github.com/halcy/Mastodon.py">For Python</a></li>
+<li><a href="https://github.com/Zatnosk/libodonjs">For JavaScript</a></li>
+<li><a href="https://github.com/jessicahayley/node-mastodon">For JavaScript (Node.js)</a></li>
+</ul>
+<h1 id="notes">Notes</h1>
+<p>When an array parameter is mentioned, the Rails convention of specifying array parameters in query strings is meant. For example, a ruby array like <code>foo = [1, 2, 3]</code> can be encoded in the params as <code>foo[]=1&amp;foo[]=2&amp;foo[]=3</code>. Square brackets can be indexed but can also be empty.</p>
+<p>When a file parameter is mentioned, a form-encoded upload is expected.</p>
+<h1 id="methods">Methods</h1>
+<h2 id="posting-a-new-status">Posting a new status</h2>
+<p><strong>POST /api/v1/statuses</strong></p>
+<p>Form data:</p>
+<ul>
+<li><code>status</code>: The text of the status</li>
+<li><code>in_reply_to_id</code> (optional): local ID of the status you want to reply to</li>
+<li><code>media_ids</code> (optional): array of media IDs to attach to the status (maximum 4)</li>
+<li><code>sensitive</code> (optional): set this to mark the media of the status as NSFW</li>
+<li><code>visibility</code> (optional): either <code>private</code>, <code>unlisted</code> or <code>public</code></li>
+</ul>
+<p>Returns the new status.</p>
+<p><strong>POST /api/v1/media</strong></p>
+<p>Form data:</p>
+<ul>
+<li><code>file</code>: Image to be uploaded</li>
+</ul>
+<p>Returns a media object with an ID that can be attached when creating a status (see above).</p>
+<h2 id="retrieving-a-timeline">Retrieving a timeline</h2>
+<p><strong>GET /api/v1/timelines/home</strong><br />
+<strong>GET /api/v1/timelines/mentions</strong><br />
+<strong>GET /api/v1/timelines/public</strong><br />
+<strong>GET /api/v1/timelines/tag/:hashtag</strong></p>
+<p>Returns statuses, most recent ones first. Home timeline is statuses from people you follow, mentions timeline is all statuses that mention you. Public timeline is "whole known network", and the last is the hashtag timeline.</p>
+<p>Query parameters:</p>
+<ul>
+<li><code>max_id</code> (optional): Skip statuses younger than ID (e.g. navigate backwards in time)</li>
+<li><code>since_id</code> (optional): Skip statuses older than ID (e.g. check for updates)</li>
+</ul>
+<h2 id="notifications">Notifications</h2>
+<p><strong>GET /api/v1/notifications</strong></p>
+<p>Returns notifications for the authenticated user. Each notification has an <code>id</code>, a <code>type</code> (mention, reblog, favourite, follow), an <code>account</code> which it came <em>from</em>, and in case of mention, reblog and favourite also a <code>status</code>.</p>
+<h2 id="following-a-remote-user">Following a remote user</h2>
+<p><strong>POST /api/v1/follows</strong></p>
+<p>Form data:</p>
+<ul>
+<li>uri: username@domain of the person you want to follow</li>
+</ul>
+<p>Returns the local representation of the followed account.</p>
+<h2 id="fetching-data">Fetching data</h2>
+<p><strong>GET /api/v1/statuses/:id</strong></p>
+<p>Returns status.</p>
+<p><strong>GET /api/v1/accounts/:id</strong></p>
+<p>Returns account.</p>
+<p><strong>GET /api/v1/accounts/verify_credentials</strong></p>
+<p>Returns authenticated user's account.</p>
+<p><strong>GET /api/v1/accounts/:id/statuses</strong></p>
+<p>Returns statuses by user. Same options as timeline are permitted.</p>
+<p><strong>GET /api/v1/accounts/:id/following</strong></p>
+<p>Returns users the given user is following.</p>
+<p><strong>GET /api/v1/accounts/:id/followers</strong></p>
+<p>Returns users the given user is followed by.</p>
+<p><strong>GET /api/v1/accounts/relationships</strong></p>
+<p>Returns relationships (<code>following</code>, <code>followed_by</code>, <code>blocking</code>) of the current user to a list of given accounts.</p>
+<p>Query parameters:</p>
+<ul>
+<li><code>id</code> (can be array): Account IDs</li>
+</ul>
+<p><strong>GET /api/v1/accounts/search</strong></p>
+<p>Returns matching accounts. Will lookup an account remotely if the search term is in the username@domain format and not yet in the database.</p>
+<p>Query parameters:</p>
+<ul>
+<li><code>q</code>: what to search for</li>
+<li><code>limit</code>: maximum number of matching accounts to return</li>
+</ul>
+<p><strong>GET /api/v1/blocks</strong></p>
+<p>Returns accounts blocked by authenticated user.</p>
+<p><strong>GET /api/v1/favourites</strong></p>
+<p>Returns statuses favourited by authenticated user.</p>
+<h2 id="deleting-a-status">Deleting a status</h2>
+<p><strong>DELETE /api/v1/statuses/:id</strong></p>
+<p>Returns an empty object.</p>
+<h2 id="reblogging-a-status">Reblogging a status</h2>
+<p><strong>POST /api/v1/statuses/:id/reblog</strong></p>
+<p>Returns a new status that wraps around the reblogged one.</p>
+<h2 id="unreblogging-a-status">Unreblogging a status</h2>
+<p><strong>POST /api/v1/statuses/:id/unreblog</strong></p>
+<p>Returns the status that used to be reblogged.</p>
+<h2 id="favouriting-a-status">Favouriting a status</h2>
+<p><strong>POST /api/v1/statuses/:id/favourite</strong></p>
+<p>Returns the target status.</p>
+<h2 id="unfavouriting-a-status">Unfavouriting a status</h2>
+<p><strong>POST /api/v1/statuses/:id/unfavourite</strong></p>
+<p>Returns the target status.</p>
+<h2 id="threads">Threads</h2>
+<p><strong>GET /api/v1/statuses/:id/context</strong></p>
+<p>Returns <code>ancestors</code> and <code>descendants</code> of the status.</p>
+<h2 id="who-rebloggedfavourited-a-status">Who reblogged/favourited a status</h2>
+<p><strong>GET /api/v1/statuses/:id/reblogged_by</strong><br />
+<strong>GET /api/v1/statuses/:id/favourited_by</strong></p>
+<p>Returns list of accounts.</p>
+<h2 id="following-and-unfollowing-users">Following and unfollowing users</h2>
+<p><strong>POST /api/v1/accounts/:id/follow</strong><br />
+<strong>POST /api/v1/accounts/:id/unfollow</strong></p>
+<p>Returns the updated relationship to the user.</p>
+<h2 id="blocking-and-unblocking-users">Blocking and unblocking users</h2>
+<p><strong>POST /api/v1/accounts/:id/block</strong><br />
+<strong>POST /api/v1/accounts/:id/unblock</strong></p>
+<p>Returns the updated relationship to the user.</p>
+<h2 id="oauth-apps">OAuth apps</h2>
+<p><strong>POST /api/v1/apps</strong></p>
+<p>Form data:</p>
+<ul>
+<li><code>client_name</code>: Name of your application</li>
+<li><code>redirect_uris</code>: Where the user should be redirected after authorization (for no redirect, use <code>urn:ietf:wg:oauth:2.0:oob</code>)</li>
+<li><code>scopes</code>: This can be a space-separated list of the following items: "read", "write" and "follow" (see <a href="https://github.com/Gargron/mastodon/wiki/OAuth-details">this page</a> for details on what the scopes do)</li>
+<li><code>website</code>: (optional) URL to the homepage of your app</li>
+</ul>
+<p>Creates a new OAuth app. Returns <code>id</code>, <code>client_id</code> and <code>client_secret</code> which can be used with <a href="https://github.com/Gargron/mastodon/wiki/Testing-with-cURL">OAuth authentication in your 3rd party app</a>.</p>
+<hr />
+<h1 id="entities">Entities</h1>
+<h2 id="status">Status</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>uri</code></td>
+<td>fediverse-unique resource ID</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>URL to the status page (can be remote)</td>
+</tr>
+<tr>
+<td><code>account</code></td>
+<td>Account</td>
+</tr>
+<tr>
+<td><code>in_reply_to_id</code></td>
+<td>null or ID of status it replies to</td>
+</tr>
+<tr>
+<td><code>reblog</code></td>
+<td>null or Status</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>Body of the status. This will contain HTML (remote HTML already sanitized)</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>reblogs_count</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>favourites_count</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>reblogged</code></td>
+<td>Boolean for authenticated user</td>
+</tr>
+<tr>
+<td><code>favourited</code></td>
+<td>Boolean for authenticated user</td>
+</tr>
+<tr>
+<td><code>media_attachments</code></td>
+<td>array of MediaAttachments</td>
+</tr>
+<tr>
+<td><code>mentions</code></td>
+<td>array of Mentions</td>
+</tr>
+<tr>
+<td><code>application</code></td>
+<td>Application from which the status was posted</td>
+</tr>
+</tbody>
+</table>
+<p>Media Attachment:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>URL of the original image (can be remote)</td>
+</tr>
+<tr>
+<td><code>preview_url</code></td>
+<td>URL of the preview image</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Image or video</td>
+</tr>
+</tbody>
+</table>
+<p>Mention:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>URL of user's profile (can be remote)</td>
+</tr>
+<tr>
+<td><code>acct</code></td>
+<td>Username for local or username@domain for remote users</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Account ID</td>
+</tr>
+</tbody>
+</table>
+<p>Application:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Name of the app</td>
+</tr>
+<tr>
+<td><code>website</code></td>
+<td>Homepage URL of the app</td>
+</tr>
+</tbody>
+</table>
+<h2 id="account">Account</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>username</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>acct</code></td>
+<td>Equals username for local users, includes @domain for remote ones</td>
+</tr>
+<tr>
+<td><code>display_name</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>note</code></td>
+<td>Biography of user</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>URL of the user's profile page (can be remote)</td>
+</tr>
+<tr>
+<td><code>avatar</code></td>
+<td>URL to the avatar image</td>
+</tr>
+<tr>
+<td><code>header</code></td>
+<td>URL to the header image</td>
+</tr>
+<tr>
+<td><code>followers_count</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>following_count</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>statuses_count</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="pagination">Pagination</h1>
+<p>API methods that return collections of items can return a <code>Link</code> header containing URLs for the <code>next</code> and <code>prev</code> pages. <a href="https://tools.ietf.org/html/rfc5988">Link header RFC</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../OAuth-details/" class="btn btn-neutral float-right" title="OAuth details">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Contributing/Translating/" class="btn btn-neutral" title="Translating"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../Contributing/Translating/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../OAuth-details/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

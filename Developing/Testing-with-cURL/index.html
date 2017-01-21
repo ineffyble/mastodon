@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Testing with cURL - Mastodon</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Testing with cURL";
+    var mkdocs_page_input_path = "Developing/Testing-with-cURL.md";
+    var mkdocs_page_url = "/Developing/Testing-with-cURL/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../Home/" class="icon icon-home"> Mastodon</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../Home/">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Specs-and-RFCs-used/">Specs and RFCs used</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../About/Sponsors/">Sponsors</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributing/Contribution-guide/">Contribution guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributing/Translating/">Translating</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../API/">API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../OAuth-details/">OAuth details</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Testing with cURL</a>
+        
+            <ul>
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tips-for-app-developers/">Tips for app developers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Running an instance</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Running an instance/Production-guide/">Production guide</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Mastodon</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/Apps/">Apps</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Using Mastodon/List-of-Mastodon-instances/">List of Mastodon instances</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../Home/">Mastodon</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../Home/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Developing &raquo;</li>
+        
+      
+    
+    <li>Testing with cURL</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Mastodon builds around the idea of being a server first, rather than a client itself. Similarly to how a XMPP chat server communicates with others and with its own clients, Mastodon takes care of federation to other networks, like other Mastodon or GNU Social instances. So Mastodon provides a REST API, and a 3rd-party app system for using it via OAuth2.</p>
+<p>You can get a client ID and client secret required for OAuth <a href="https://github.com/Gargron/mastodon/wiki/API#oauth-apps">via an API end-point</a>.</p>
+<p>From these two, you will need to acquire an access token. It is possible to do using your account's e-mail and password like this:</p>
+<pre><code>curl -X POST -d "client_id=CLIENT_ID_HERE&amp;client_secret=CLIENT_SECRET_HERE&amp;grant_type=password&amp;username=YOUR_EMAIL&amp;password=YOUR_PASSWORD" -Ss https://mastodon.social/oauth/token
+</code></pre>
+<p>The response will be a JSON object containing the key <code>access_token</code>. Use that token in any API requests by setting a header like this:</p>
+<pre><code>curl --header "Authorization: Bearer ACCESS_TOKEN_HERE" -sS https://mastodon.social/api/statuses/home
+</code></pre>
+<p>Please note that the password-based approach is not recommended especially if you're dealing with other user's accounts and not just your own. Usually you would use the authorization grant approach where you redirect the user to a web page on the original site where they can login and authorize the application and are then redirected back to your application with an access code.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Tips-for-app-developers/" class="btn btn-neutral float-right" title="Tips for app developers">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../OAuth-details/" class="btn btn-neutral" title="OAuth details"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../OAuth-details/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Tips-for-app-developers/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>
