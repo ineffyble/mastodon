@@ -1,27 +1,27 @@
 {
     "docs": [
         {
-            "location": "/Home/", 
+            "location": "/", 
             "text": "Mastodon\n is a free, open-source GNU social-compatible social network server. A decentralized alternative to commercial platforms, it avoids the risks of a single company monopolizing your communication. Anyone can run Mastodon and participate in the social network seamlessly.\n\n\nUsing Mastodon\n\n\n\n\nFrequently Asked Questions\n\n\nList of Mastodon instances\n\n\nApps\n\n\n\n\nUsing the API\n\n\n\n\nAPI documentation\n\n\nTesting the API with cURL\n\n\nOAuth details\n\n\nTips for app developers\n\n\n\n\nRunning Mastodon\n\n\n\n\nProduction guide\n\n\nDevelopment guide\n\n\n\n\nContributing to Mastodon\n\n\n\n\nSponsors\n\n\nTranslate Mastodon in your language\n\n\nReport bugs and submit ideas", 
             "title": "Home"
         }, 
         {
-            "location": "/Home/#using-mastodon", 
+            "location": "/#using-mastodon", 
             "text": "Frequently Asked Questions  List of Mastodon instances  Apps", 
             "title": "Using Mastodon"
         }, 
         {
-            "location": "/Home/#using-the-api", 
+            "location": "/#using-the-api", 
             "text": "API documentation  Testing the API with cURL  OAuth details  Tips for app developers", 
             "title": "Using the API"
         }, 
         {
-            "location": "/Home/#running-mastodon", 
+            "location": "/#running-mastodon", 
             "text": "Production guide  Development guide", 
             "title": "Running Mastodon"
         }, 
         {
-            "location": "/Home/#contributing-to-mastodon", 
+            "location": "/#contributing-to-mastodon", 
             "text": "Sponsors  Translate Mastodon in your language  Report bugs and submit ideas", 
             "title": "Contributing to Mastodon"
         }, 
