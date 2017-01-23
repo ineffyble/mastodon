@@ -18,6 +18,12 @@ class FetchLinkCardService < BaseService
     card.description = meta_property(page, 'og:description') || meta_property(page, 'description')
     card.image       = URI.parse(meta_property(page, 'og:image')) if meta_property(page, 'og:image')
 
+    video_url_type = (ENV['LOCAL_HTTPS'] == 'true' ? 'og:video:secure_url' : 'og:video:url')
+    if meta_property(page, 'og:video:type') && meta_property(page, video_url_type)
+      card.video_type  = meta_property(page, 'og:video:type')
+      card.video_url   = meta_property(page,  video_url_type)
+    end
+
     card.save_with_optional_image!
   end
 

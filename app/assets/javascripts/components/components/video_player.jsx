@@ -141,7 +141,7 @@ const VideoPlayer = React.createClass({
 
     if (this.state.preview) {
       return (
-        <div style={{ cursor: 'pointer', position: 'relative', marginTop: '8px', width: `${width}px`, height: `${height}px`, background: `url(${media.get('preview_url')}) no-repeat center`, backgroundSize: 'cover' }} onClick={this.handleOpen}>
+        <div style={{ cursor: 'pointer', position: 'relative', marginTop: '8px', width: `${width}px`, height: `${height}px`, background: media.get('preview_url') ? `url(${media.get('preview_url')}) no-repeat center` : 'none', backgroundSize: 'cover' }} onClick={this.handleOpen}>
           {spoilerButton}
           <div style={{ position: 'absolute', top: '50%', left: '50%', fontSize: '36px', transform: 'translate(-50%, -50%)', padding: '5px', borderRadius: '100px', color: 'rgba(255, 255, 255, 0.8)' }}><i className='fa fa-play' /></div>
         </div>

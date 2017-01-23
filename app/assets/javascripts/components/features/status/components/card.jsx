@@ -1,20 +1,25 @@
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import ImmutablePropTypes from 'react-immutable-proptypes';
+import VideoPlayer from '../../../components/video_player';
 
 const outerStyle = {
   display: 'flex',
+  flexWrap: 'wrap',
   cursor: 'pointer',
   fontSize: '14px',
   border: '1px solid #363c4b',
   borderRadius: '4px',
-  color: '#616b86',
   marginTop: '14px',
-  textDecoration: 'none',
   overflow: 'hidden'
 };
 
+const linkStyle = {
+  color: '#616b86',
+  textDecoration: 'none',
+}
+
 const contentStyle = {
-  flex: '1 1 auto',
+  flex: '1 1 100px',
   padding: '8px',
   paddingLeft: '14px',
   overflow: 'hidden'
@@ -39,6 +44,10 @@ const imageOuterStyle = {
   background: '#373b4a'
 };
 
+const videoOuterStyle = {
+  flex: '0 0 100%',
+};
+
 const imageStyle = {
   display: 'block',
   width: '100%',
@@ -50,8 +59,18 @@ const imageStyle = {
 const hostStyle = {
   display: 'block',
   marginTop: '5px',
-  fontSize: '13px'
+  fontSize: '13px',
+  color: '#616b86',
+  textDecoration: 'none',
 };
+
+const frameStyle = {
+  display: 'block',
+  width: '100%',
+  height: 'auto',
+  margin: '0',
+  border: false
+}
 
 const getHostname = url => {
   const parser = document.createElement('a');
@@ -73,26 +92,50 @@ const Card = React.createClass({
       return null;
     }
 
-    let image = '';
+    let media = '';
 
-    if (card.get('image')) {
-      image = (
+    if (card.get('video')) {
+      let videoContent = '';
+      switch (card.get('video').get('type')) {
+      case 'text/html':
+        videoContent = <iframe src={card.get('video').get('url')} style={frameStyle} />;
+        break;
+      case 'video/mp4':
+        let videoMedia = new Map();
+        videoMedia.set('url', card.get('video').get('url'));
+        videoContent = <VideoPlayer media={videoMedia} width='100%' />;
+        break;
+      case 'application/x-shockwave-flash':
+        // This space intentionally left blank.
+        break;
+      }
+      media = (
+        <div style={videoOuterStyle}>
+          {videoContent}
+        </div>
+      );
+    } else if (card.get('image')) {
+      media = (
         <div style={imageOuterStyle}>
-          <img src={card.get('image')} alt={card.get('title')} style={imageStyle} />
+          <a href={card.get('url')} >
+            <img src={card.get('image')} alt={card.get('title')} style={imageStyle} />
+          </a>
         </div>
       );
     }
 
     return (
-      <a style={outerStyle} href={card.get('url')} className='status-card'>
-        {image}
+      <div style={outerStyle} className='status-card'>
+        {media}
 
-        <div style={contentStyle}>
-          <strong style={titleStyle} title={card.get('title')}>{card.get('title')}</strong>
-          <p style={descriptionStyle}>{card.get('description').substring(0, 50)}</p>
-          <span style={hostStyle}>{getHostname(card.get('url'))}</span>
+        <div style={contentStyle} href={card.get('url')} >
+          <a href={card.get('url')} style={linkStyle} >
+            <strong style={titleStyle} title={card.get('title')}>{card.get('title')}</strong>
+            <p style={descriptionStyle}>{card.get('description').substring(0, 50)}</p>
+            <span style={hostStyle}>{getHostname(card.get('url'))}</span>
+          </a>
         </div>
-      </a>
+      </div>
     );
   }
 });
